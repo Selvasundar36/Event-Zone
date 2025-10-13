@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Selvasundar36/github.io/Event-Zone/static/css/main.bc3a7179.css",
+    "main.js": "/Selvasundar36/github.io/Event-Zone/static/js/main.fe15fca4.js",
+    "static/js/453.d7446e4a.chunk.js": "/Selvasundar36/github.io/Event-Zone/static/js/453.d7446e4a.chunk.js",
+    "index.html": "/Selvasundar36/github.io/Event-Zone/index.html",
+    "main.bc3a7179.css.map": "/Selvasundar36/github.io/Event-Zone/static/css/main.bc3a7179.css.map",
+    "main.fe15fca4.js.map": "/Selvasundar36/github.io/Event-Zone/static/js/main.fe15fca4.js.map",
+    "453.d7446e4a.chunk.js.map": "/Selvasundar36/github.io/Event-Zone/static/js/453.d7446e4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc3a7179.css",
+    "static/js/main.fe15fca4.js"
+  ]
+}
