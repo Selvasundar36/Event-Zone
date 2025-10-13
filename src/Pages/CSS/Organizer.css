@@ -1,0 +1,106 @@
+.organizer-section {
+  padding: 3rem 1.5rem;
+  
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.organizer-title {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Exo', sans-serif;
+}
+
+/* Slider container */
+.organizer-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track that scrolls */
+.organizer-track {
+  height: 500px;
+  display: flex;
+  animation: scrollLeft 30s linear infinite;
+}
+
+/* Keyframes for continuous scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual card */
+.organizer-card {
+  flex: 0 0 33.3333%;
+  max-width: 400px;
+  text-align: center;
+  height: 450px;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.organizer-card:hover {
+  transform: translateY(-5px);
+}
+
+.organizer-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.organizer-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #00ffff;
+}
+
+.organizer-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.organizer-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+.stars {
+  margin-top: 0.5rem;
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .organizer-card {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .organizer-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

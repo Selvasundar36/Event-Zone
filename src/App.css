@@ -1,7 +1,12 @@
-.app{
-  text-align: center;
-  color: blue;
-  font-size: 24px;
-  margin-top: 20px;
-    border: red solid 2px;
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
 }
+
+.app-container {
+  position: relative;
+  z-index: 1;
+}
+
