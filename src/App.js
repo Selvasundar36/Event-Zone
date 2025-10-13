@@ -6,6 +6,9 @@ import Home from "./Pages/Home";
 import Footer from "./Component/Footer/Footer";
 import AboutUs from "./Pages/About";
 import Organizer from "./Pages/Organizer";
+import Event from "./Pages/Event";
+import Generalinfo from "./Pages/Generalinfo";
+import Schedule from "./Pages/Schedule";
 
 
 function ParticleBackground() {
@@ -135,6 +138,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
            <Route path="/organizer" element={<Organizer />} />
+           <Route path="/event" element={<Event />} />
+           <Route path="/generalinfo" element={<Generalinfo />} />
+           <Route path="/schedule" element={<Schedule />} />
         </Routes>
         <Footer />
       </Router>

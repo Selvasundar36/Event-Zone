@@ -1,0 +1,88 @@
+.schedule-section {
+  padding: 50px 20px;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.schedule-title {
+    text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.schedule-block {
+  background-color:#f0f0f01a;
+  border-left: 5px solid  #00f0ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #00f0ff(0,0,0,0.1);
+}
+.schedule-block:hover {
+    border: #005f8f 2px solid;
+    box-shadow: 0 0 20px rgba(7, 219, 231, 0.655);
+       background: #f0f0f033;
+     transform: translateY(-10px);
+
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.schedule-block h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color:  #00f0ff;
+}
+
+.schedule-block ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.schedule-block ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #fbfbfb;
+}
+.schedule-block.lunch h3 {
+    color: #fdfdff;
+}
+
+.schedule-block.lunch {
+    color: #f4faf9;
+  text-align: center;
+  background-color: #baeea7ae;
+  border-left-color: #00bcd4;
+}
+
+.schedule-block.lunch p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #4706dd;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .schedule-title {
+    font-size: 2rem;
+  }
+
+  .schedule-block h3 {
+    font-size: 1.1rem;
+  }
+
+  .schedule-block ul li {
+    font-size: 0.95rem;
+  }
+}

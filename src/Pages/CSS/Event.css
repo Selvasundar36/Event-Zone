@@ -1,0 +1,145 @@
+:root {
+  
+  --card-color: #1a1a1a55;
+  --glow-color: rgba(43, 208, 226, 0.6); /* Purple glow */
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  
+}
+h1{
+    text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.tevent-title{
+    
+    text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.event-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    
+    
+}
+.event-title{
+    margin-top: 90px;}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  
+  
+}
+
+.card {
+  background:#f0f0f01a;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 260px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  border-left: 5px solid  #00f0ff;
+}
+
+.card:hover {
+     border: #005f8f 2px solid;
+    box-shadow: 0 0 20px rgba(7, 219, 231, 0.655);
+       background: #f0f0f033;
+     transform: translateY(-10px);
+
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-content h3 {
+  color: #f0f0f0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: rgba(240, 240, 240, 0.8);
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.card-info-wrapper {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-info-title h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85em;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  #cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+}

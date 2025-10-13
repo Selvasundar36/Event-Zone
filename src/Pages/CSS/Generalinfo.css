@@ -1,0 +1,169 @@
+/* Root styles */
+.general-info-section {
+  padding: 50px 20px;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: #dedddd;
+  max-width: 1000px;
+  margin: 50px auto;
+  
+}
+
+.general-info-title {
+   text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.general-info-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #d8d4d4;
+}
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: -1px;
+  border-left: 3px solid  #00f0ff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color:  #00f0ff;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #00f0ff;
+}
+
+.timeline-content {
+    background: #f0f0f01a;
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-left: 5px solid  #00f0ff;
+}
+.timeline-content:hover{
+    border: #005f8f 2px solid;
+    box-shadow: 0 0 20px rgba(7, 219, 231, 0.655);
+       background: #f0f0f033;
+     transform: translateY(-10px);
+
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #00f0ff;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #e2dede;
+}
+
+/* Help button */
+.help-button {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.help-button button {
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.help-button button:hover {
+  background-color: #005f8f;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .general-info-title {
+    font-size: 2rem;
+  }
+
+  .general-info-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+    border-left: 2px solid #00f0ff;
+  }
+
+  .timeline-dot {
+    left: -28px;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 2px #00f0ff;
+  }
+
+  .timeline-content {
+    
+    padding: 16px;
+    margin-left: -2px;
+  }
+  
+  
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
+
+  .help-button button {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .general-info-title {
+    font-size: 1.7rem;
+  }
+
+  .timeline-content {
+    padding: 14px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .help-button {
+    text-align: center;
+  }
+}

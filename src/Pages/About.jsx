@@ -20,7 +20,7 @@ const About = () => {
       
      
      <div className="about-overlay">
-        <h1  data-aos="fade-down">About Us</h1>
+        <h1  data-aos="fade-up">About Us</h1>
         
       <div>
        

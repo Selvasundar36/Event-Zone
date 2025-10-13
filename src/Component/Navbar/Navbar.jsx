@@ -20,7 +20,7 @@ const Navbar = () => {
         <li onClick={() => setMenu("Home")}><Link style={{textDecoration:'none'}} to="/">Home{menu === "Home" ? <hr /> : null}</Link></li>
         <li onClick={() => setMenu("About")}><Link style={{textDecoration:'none'}} to="/About">About{menu === "About" ? <hr /> : null}</Link></li>
         <li onClick={() => setMenu("Organizer")}><Link style={{textDecoration:'none'}} to="/Organizer">Organizer{menu === "Organizer" ? <hr /> : null}</Link></li>
-        <li onClick={() => setMenu("Events")}><Link style={{textDecoration:'none'}} to="/Events">Events{menu === "Events" ? <hr /> : null}</Link></li>
+        <li onClick={() => setMenu("Events")}><Link style={{textDecoration:'none'}} to="/Event">Events{menu === "Events" ? <hr /> : null}</Link></li>
         <li onClick={() => setMenu("GeneralInfo")}><Link style={{textDecoration:'none'}} to="/GeneralInfo">General Info{menu === "GeneralInfo" ? <hr /> : null}</Link></li>
         <li onClick={() => setMenu("Schedule")}><Link style={{textDecoration:'none'}} to="/Schedule">Schedule{menu === "Schedule" ? <hr /> : null}</Link></li>
       </div>

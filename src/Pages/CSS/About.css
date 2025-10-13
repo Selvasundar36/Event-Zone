@@ -45,11 +45,18 @@
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
   transition: transform 0.3s ease;
+  margin-bottom: 20px;
  
 }
 
 .about-block:hover {
-  transform: translateY(-5px);
+    border: #005f8f 2px solid;
+    box-shadow: 0 0 20px rgba(7, 219, 231, 0.655);
+       background: #f0f0f033;
+     transform: translateY(-10px);
+
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
 }
 
 .about-block h2 {
@@ -63,6 +70,7 @@
    padding: 10px;
    margin-left: 20px;
 }
+
 
 .about-block p {
   font-size: 1rem;

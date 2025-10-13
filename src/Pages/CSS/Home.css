@@ -23,9 +23,13 @@ body, html {
 }
 
 .overlay:hover {
-    box-shadow: 0 0 30px rgba(0, 238, 255, 0.79);
-    transform: scale(1.02);
-    ;
+      border: #005f8f 2px solid;
+    box-shadow: 0 0 20px rgba(7, 219, 231, 0.655);
+       background: #f0f0f033;
+     transform: translateY(-10px);
+
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
 }
 
 .overlay {
@@ -35,6 +39,8 @@ body, html {
   box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
   max-width: 900px;
   width: 100%;
+  border-left: 5px solid  #00f0ff;
+  border-right: 5px solid  #00f0ff;
   
   
 }
