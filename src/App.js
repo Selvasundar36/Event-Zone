@@ -9,6 +9,7 @@ import Organizer from "./Pages/Organizer";
 import Event from "./Pages/Event";
 import Generalinfo from "./Pages/Generalinfo";
 import Schedule from "./Pages/Schedule";
+import ChatBotButton from "./Component/ChatBotButton/ChatBotButton";
 
 
 function ParticleBackground() {
@@ -134,7 +135,9 @@ function App() {
       <ParticleBackground />
       <Router>
         <Navbar />
+        <ChatBotButton />
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
            <Route path="/organizer" element={<Organizer />} />

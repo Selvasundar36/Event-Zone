@@ -5,43 +5,59 @@
   margin: auto;
   overflow: hidden;
   margin-bottom: 40px;
-  
 }
 
+.organizer-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+/* 🔄 Card Track */
 .organizer-track {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
+/* 💳 Organizer Card */
 .organizer-card {
   flex: 0 0 30%;
   max-width: 30%;
-  background-color:#f0f0f01a;
-  border-top: 5px solid  #00f0ff;
-   border-bottom: 5px solid  #00f0ff;
+  margin-top: 30px;
+  background-color: #f0f0f01a;
+  border-top: 5px solid #00f0ff;
+  border-bottom: 5px solid #00f0ff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px #00f0ff(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 240, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
 .organizer-card:hover {
-   background: #f0f0f033;
-     transform: translateY(-10px);
-  box-shadow: 0 0 15px var(--glow-color);
-    transform: translateY(-3px);
-    transition: all 0.3s ease;
+  background: #f0f0f033;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #00f0ff;
 }
 
+/* 🖼️ Organizer Image */
 .organizer-img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.629);
+  border: 3px solid #00f0ff;
 }
 
+/* ⬅️➡️ Navigation Buttons */
 .nav-btn {
   position: absolute;
   top: 50%;
@@ -55,22 +71,11 @@
   z-index: 10;
   opacity: 0.8;
   border-radius: 50%;
-  
-}
-.organizer-title {
-  text-align: center;
-  font-size: 3rem;
-  color: #00f0ff;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  margin-top: 100px;
-
 }
 
 .prev-btn {
   left: 20px;
   border: 5px solid orangered;
-  
 }
 
 .next-btn {
@@ -78,15 +83,37 @@
   border: 5px solid orangered;
 }
 
-/* Responsive */
+/* 📱 Responsive for Mobile */
 @media (max-width: 768px) {
+  .organizer-title {
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+
   .organizer-card {
     flex: 0 0 80%;
     max-width: 80%;
+    margin: 20px auto;
   }
 
   .organizer-track {
     flex-wrap: wrap;
     justify-content: center;
+    overflow-x: unset;
+    scroll-snap-type: none;
   }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* 🧼 Hide Scrollbar Globally */
+.organizer-track::-webkit-scrollbar {
+  display: none;
+}
+
+.organizer-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

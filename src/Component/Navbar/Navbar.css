@@ -120,6 +120,11 @@
 @media (max-width: 992px) {
   .nav-menu {
     gap: 20px;
+    
+  }
+  .nav-logo p{
+    font-size: 2rem;
+    
   }
 }
 
@@ -146,5 +151,9 @@
 
   .menu-toggle {
     display: flex;
+  }
+  .nav-logo p{
+    font-size: 1.7rem;
+    
   }
 }

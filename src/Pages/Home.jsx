@@ -13,7 +13,7 @@ import Schedule from './Schedule';
 const Home = () => {
   return (
     <div>
-
+ 
   <div class="banner" data-aos="fade-up">
     <div class="overlay">
       <h1>EVent'25</h1>
@@ -23,7 +23,7 @@ const Home = () => {
       <p class="date">Event Starts In: <strong>08 Oct 2025, 11:00 AM</strong></p>
       <a href="#" class="register-btn">Register Now</a>
     </div>
-    <div class="help-icon">💬 Need Help?</div>
+    
   </div>
    <About />
    
