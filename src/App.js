@@ -11,7 +11,6 @@ import Generalinfo from "./Pages/Generalinfo";
 import Schedule from "./Pages/Schedule";
 import ChatBotButton from "./Component/ChatBotButton/ChatBotButton";
 
-
 function ParticleBackground() {
   const canvasRef = useRef(null);
 
@@ -29,13 +28,23 @@ function ParticleBackground() {
       mouse.y = e.y;
     });
 
+    const colors = [
+      "#FFD700", // Gold
+      "#20c4daff", // Goldenrod
+      "#37ff0fff", // Dark Goldenrod
+      "#f0b3f5ff", // Wheat
+      "#f3476cff", // Cornsilk
+      "#e13bf0ff", // Moccasin
+    ];
+
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.radius = 2;
+        this.radius = 1.5;
         this.dx = (Math.random() - 0.5) * 1.5;
         this.dy = (Math.random() - 0.5) * 1.5;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
       draw() {
@@ -43,17 +52,11 @@ function ParticleBackground() {
         const isHovered = distance < 50;
 
         ctx.beginPath();
-        ctx.arc(this.x, this.y, isHovered ? 5 : this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = isHovered ? "#00ffff" : "#00f0ff";
+        ctx.arc(this.x, this.y, isHovered ? 3 : this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
 
-        // Glow effect
-        if (isHovered) {
-          ctx.shadowBlur = 15;
-          ctx.shadowColor = "#00ffff";
-        } else {
-          ctx.shadowBlur = 0;
-          ctx.shadowColor = "transparent";
-        }
+        ctx.shadowBlur = isHovered ? 10 : 0;
+        ctx.shadowColor = isHovered ? this.color : "transparent";
 
         ctx.fill();
         ctx.closePath();
@@ -61,7 +64,7 @@ function ParticleBackground() {
 
       update() {
         const distance = Math.sqrt((this.x - mouse.x) ** 2 + (this.y - mouse.y) ** 2);
-        const targetRadius = distance < 50 ? 5 : 2;
+        const targetRadius = distance < 50 ? 3 : 1.5;
         this.radius += (targetRadius - this.radius) * 0.1;
 
         this.x += this.dx;
@@ -81,9 +84,9 @@ function ParticleBackground() {
           const dy = particles[a].y - particles[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 80) {
             ctx.beginPath();
-            ctx.strokeStyle = "rgba(0, 240, 255, 0.2)";
+            ctx.strokeStyle = "rgba(218, 165, 32, 0.2)";
             ctx.lineWidth = 1;
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
@@ -94,7 +97,7 @@ function ParticleBackground() {
     }
 
     function animate() {
-      ctx.fillStyle = "#000000"; // Black background fill
+      ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((p) => p.update());
@@ -123,11 +126,12 @@ function ParticleBackground() {
         zIndex: -1,
         width: "100vw",
         height: "100vh",
-        backgroundColor: "#000000", // Black canvas background
+        backgroundColor: "#000000",
       }}
     />
   );
 }
+
 
 function App() {
   return (
@@ -137,15 +141,15 @@ function App() {
         <Navbar />
         <ChatBotButton />
         <Routes>
-          
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-           <Route path="/organizer" element={<Organizer />} />
-           <Route path="/event" element={<Event />} />
-           <Route path="/generalinfo" element={<Generalinfo />} />
-           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/organizer" element={<Organizer />} />
+          <Route path="/event" element={<Event />} />
+          <Route path="/generalinfo" element={<Generalinfo />} />
+          <Route path="/schedule" element={<Schedule />} />
+         
         </Routes>
-        <Footer />
+         
       </Router>
     </div>
   );

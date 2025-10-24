@@ -5,6 +5,7 @@ import Organizer from './Organizer';
 import Event from './Event';
 import Generalinfo from './Generalinfo';
 import Schedule from './Schedule';
+import Footer from '../Component/Footer/Footer';
 
 
 
@@ -31,6 +32,7 @@ const Home = () => {
    <Event />
    <Generalinfo />
    <Schedule />
+   <Footer />
   </div>
 
 
