@@ -6,6 +6,8 @@ import Event from './Event';
 import Generalinfo from './Generalinfo';
 import Schedule from './Schedule';
 import Footer from '../Component/Footer/Footer';
+import 'aos/dist/aos.css';
+
 
 
 
